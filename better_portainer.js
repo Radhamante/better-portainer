@@ -176,7 +176,20 @@
         });
     }
 
+    async function verifyPortainerVersion() {
+        try {
+            const res = await fetch("/api/system/status")
+            const json = await res.json()
+            if (json.Version != "2.21.4") {
+                console.warn(`TAMPER ::: Better Portainer is not tested on this version. Some features may not work. Please use version 2.21.4 (current version : ${json.Version})`)
+            }
+        }catch (err) {
+            console.error("TAMPER ::: fail to get current version", err);
+        }
+    }
+
     // Initialisation du script
+    verifyPortainerVersion();
     injectStyles();
     observeElements();
     observeLogs();
