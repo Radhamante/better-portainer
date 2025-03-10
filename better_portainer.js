@@ -8,8 +8,10 @@
 // @match        https://portainer.radhamante.fr/
 // @icon         https://vectochronix.io/docker/29d4ee6d4a5c786588a7.svg
 // @grant        GM_xmlhttpRequest
-// @run-at       document-start
+// @connect      raw.githubusercontent.com
+// @require      https://raw.githubusercontent.com/Radhamante/better-portainer/refs/heads/main/better_portainer.js
 // ==/UserScript==
+
 
 // TESTED FOR Community Edition 2.21.4
 
